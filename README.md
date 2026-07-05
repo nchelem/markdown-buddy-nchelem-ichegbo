@@ -1,14 +1,18 @@
-# Project Title: Markdown Buddy
+# Technical Analysis Portfolio
 
 ## Overview
-A brief, high-level description of the data analysis project, its core objectives, and the business or research questions it answers.
+This repository contains a technical data science framework built in R to monitor stock market performance and evaluate personal investment holdings. By downloading historical equity and index data, the project surfaces trends and quantitative signals to analyze portfolio assets, such as S&P 500 index ETFs.
 
-## Features & Key Scripts
-* `data_preprocessing.R` - Cleans and prepares the synthetic dataset.
-* `exploratory_analysis.R` - Generates summary statistics and exploratory plots.
-* `modeling_analysis.R` - Runs statistical models or regressions.
+## Project Structure
+* `data/` : Local directory for storage of equity asset metadata.
+* `scripts/` : Core R processing assets.
+  * `utils.R` : Utility functions to read stock symbols from a portfolio file.
+  * `technical_analysis.R` : Scripts managing automated data downloads and technical indicators.
+* `docs/` : R Markdown project validation documentation.
 
-## Dependencies & Installation
-To run the scripts in this repository, ensure you have R installed. You will also need the following packages:
-```R
-install.packages(c("tidyverse", "janitor", "knitr"))
+## Installation & Dependencies
+To replicate this analysis workflow locally or in Posit Cloud, ensure you have R and RStudio installed. 
+
+1. Clone this repository to your local machine using Git Bash:
+   ```bash
+   git clone [https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git](https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git)
