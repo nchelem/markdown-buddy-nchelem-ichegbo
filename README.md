@@ -14,15 +14,29 @@ This repository contains a technical data science framework built in R to monito
 To replicate this analysis workflow locally or in Posit Cloud, ensure you have R and RStudio installed. 
 
 1. Clone this repository to your local machine using Git Bash:
-   ```bash
-   git clone [https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git](https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git)
+git clone [https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git](https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git)
 
-install.packages(c("tidyverse", "quantmod"))
+2. Install the required data science and financial modeling packages in R:
+install.packages("tidyverse")
+install.packages("quantmod")
 
-# Load technical utility metrics
-source("scripts/utils.R")
+## Example Usage
+To initialize the workflow and download historical stock data using utility configurations, run the following commands in R:
 
-# Example evaluation of an S&P 500 position
 library(quantmod)
+source("scripts/utils.R")
 getSymbols("SPY", src = "yahoo", from = "2026-01-01")
-chartSeries(SPY, theme = chartTheme("white"))
+
+## Dataset Information
+* **Data Sources:** Synthetic configuration tables mapped against historical equity data streamed programmatically via open financial APIs.
+* **Scope:** Financial data points restricted to academic performance tracking.
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+## AI Assistance Disclosure
+* **AI Tool Used:** Gemini (July 2026)
+* **Main Prompts Provided:** "Here’s a summary of my R project: [Technical analysis and portfolio tracking repository using quantmod]. Generate a professional README.md file using Markdown." and "Add sections for Installation, Example Code, and License. Keep tone concise and professional."
+* **Human Modifications:** Standardized repository names to reflect `markdown-buddy-nchelem-ichegbo`, defined specific functional requirements for `utils.R`, and added explicit configuration dependencies for the `quantmod` framework.
