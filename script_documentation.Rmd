@@ -1,0 +1,37 @@
+---
+title: "Script Documentation: Technical Portfolio Utilities"
+author: "Nchelem Kokomma Ichegbo"
+date: "2026-07-05"
+output: html_document
+---
+
+# AI Assistance Declaration
+> **AI Assistance Declaration:** I used Gemini for formatting layout suggestions and code block examples. Prompts used: *"Add syntax highlighting and improve section organization (e.g., # Purpose, ## Inputs, ## Outputs)."* I verified outputs using local markdown rendering tools. All final data tracking logic and code configurations are done by myself. I am responsible for the accuracy and originality of this work.
+
+---
+
+# Purpose
+The purpose of the `utils.R` script is to handle core environment setups for the quantitative evaluation workspace. It programmaticly reads incoming stock ticker lists from local configurations and prepares data frames for active technical monitoring.
+
+## Inputs
+* **Configuration File:** `data/portfolio_symbols.csv` (A local table listing target asset ticker symbols).
+* **Package Dependencies:** `quantmod` and `tidyverse`.
+
+## Outputs
+* **Data Stream:** Downloads historical daily tracking parameters directly from public APIs.
+* **Console Metrics:** Prints a verification summary showing the total count of successfully imported ticker profiles.
+
+# Example Code Block
+
+Below is a structurally compliant example demonstrating how data scientists load configuration data blocks safely inside an R session:
+
+```r
+# Custom R function to parse input tickers safely
+load_portfolio_tickers <- function(file_path) {
+  if (file_exists(file_path)) {
+    tickers <- read.csv(file_path, stringsAsFactors = FALSE)
+    return(tickers$symbol)
+  } else {
+    stop("Configuration file target path not found.")
+  }
+}
