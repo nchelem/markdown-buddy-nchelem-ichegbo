@@ -1,4 +1,4 @@
-# Project Title: [Name of Your Analytics Project]
+# Project Title: Markdown Buddy
 
 ## Overview
 A brief, high-level description of the data analysis project, its core objectives, and the business or research questions it answers.
