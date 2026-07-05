@@ -16,3 +16,13 @@ To replicate this analysis workflow locally or in Posit Cloud, ensure you have R
 1. Clone this repository to your local machine using Git Bash:
    ```bash
    git clone [https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git](https://github.com/nchelem/markdown-buddy-nchelem-ichegbo.git)
+
+install.packages(c("tidyverse", "quantmod"))
+
+# Load technical utility metrics
+source("scripts/utils.R")
+
+# Example evaluation of an S&P 500 position
+library(quantmod)
+getSymbols("SPY", src = "yahoo", from = "2026-01-01")
+chartSeries(SPY, theme = chartTheme("white"))
